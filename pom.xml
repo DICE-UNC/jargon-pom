@@ -408,11 +408,6 @@
 				<artifactId>resteasy-crypto</artifactId>
 				<version>${resteasy.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-multipart-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
 			<!-- Spring integration -->
 			<dependency>
 				<groupId>org.jboss.resteasy</groupId>
@@ -463,15 +458,9 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>1.5.1.RELEASE</version>
+				<version>${spring.boot.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jaxrs</artifactId>
-				<version>${resteasy.version}</version>
-				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.jboss.resteasy</groupId>
