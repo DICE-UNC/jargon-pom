@@ -23,6 +23,7 @@
 		<java.version>1.8</java.version>
 		<resteasy.version>3.1.0.Final</resteasy.version>
 		<spring.boot.version>1.5.1.RELEASE</spring.boot.version>
+		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
 	</properties>
 	<issueManagement>
 		<system>Git</system>
@@ -429,13 +430,8 @@
 				<artifactId>resteasy-jackson-provider</artifactId>
 				<version>${resteasy.version}</version>
 			</dependency>
-			<!-- 
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-crypto</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			 -->
+			<!-- <dependency> <groupId>org.jboss.resteasy</groupId> <artifactId>resteasy-crypto</artifactId> 
+				<version>${resteasy.version}</version> </dependency> -->
 			<dependency>
 				<groupId>org.jboss.resteasy</groupId>
 				<artifactId>resteasy-multipart-provider</artifactId>
@@ -448,6 +444,13 @@
 				<artifactId>resteasy-spring</artifactId>
 				<version>${resteasy.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-servlet-initializer</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
 			<dependency>
 				<groupId>org.apache.tika</groupId>
@@ -505,12 +508,6 @@
 			<dependency>
 				<groupId>org.jboss.resteasy</groupId>
 				<artifactId>resteasy-validator-provider-11</artifactId>
-				<version>${resteasy.version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-multipart-provider</artifactId>
 				<version>${resteasy.version}</version>
 				<scope>provided</scope>
 			</dependency>
