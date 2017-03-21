@@ -5,24 +5,23 @@
 	<groupId>org.irods</groupId>
 	<artifactId>jargon-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>4.3.0.0-SNAPSHOT</version>
+	<version>4.2.1.1-SNAPSHOT</version>
 	<name>Jargon POM</name>
 	<description>Master POM for Jargon-related projects</description>
 	<url>https://github.com/DICE-UNC/jargon</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.webmvc.version>4.3.5.RELEASE</spring.webmvc.version>
-		<spring.core.version>3.0.5.RELEASE</spring.core.version>
-		<spring.security.version>3.0.5.RELEASE</spring.security.version>
+		<spring.webmvc.version>4.3.7.RELEASE</spring.webmvc.version>
 		<hibernate.version>5.2.6.Final</hibernate.version>
 		<findbugs.version>2.5.2</findbugs.version>
-		<spring.core.version>4.3.5.RELEASE</spring.core.version>
-		<spring.security.version>4.2.1.RELEASE</spring.security.version>
 		<d1_libclient_version>2.3.0</d1_libclient_version>
 		<sl4j.version>1.7.22</sl4j.version>
 		<log4j.version>1.2.17</log4j.version>
 		<java.version>1.8</java.version>
-		<resteasy.version>3.1.0.Final</resteasy.version>
+		<spring.core.version>4.3.7.RELEASE</spring.core.version>
+		<spring.security.version>4.2.2.RELEASE</spring.security.version>
+		<spring.boot.version>1.5.2.RELEASE</spring.boot.version>
+		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
 	</properties>
 	<issueManagement>
 		<system>Git</system>
@@ -55,6 +54,32 @@
 			<id>osgeo</id>
 			<name>Open Source Geospatial Foundation Repository</name>
 			<url>http://download.osgeo.org/webdav/geotools/</url>
+		</repository>
+		<repository>
+			<id>dice.repository snaps</id>
+			<name>dice.repository.snapshots</name>
+			<url>https://raw.github.com/DICE-UNC/DICE-Maven/master/snapshots</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>dice.repository</id>
+			<name>dice.repository</name>
+			<url>https://raw.github.com/DICE-UNC/DICE-Maven/master/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
 		</repository>
 		<repository>
 			<id>renci.repository</id>
@@ -99,6 +124,16 @@
 			<name>Java.net Repository for Maven</name>
 			<url>http://download.java.net/maven/2/</url>
 			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>mygrid-uk</id>
+			<url>http://www.mygrid.org.uk/maven/repository/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 	<distributionManagement>
@@ -251,13 +286,14 @@
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
-				<artifactId>servlet-api</artifactId>
-				<version>2.5</version>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.1.0</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/junit/junit -->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.8.2</version>
+				<version>4.12</version>
 			</dependency>
 			<dependency>
 				<groupId>log4j</groupId>
@@ -268,6 +304,18 @@
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-exec</artifactId>
 				<version>1.0.1</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/commons-pool/commons-pool -->
+			<dependency>
+				<groupId>commons-pool</groupId>
+				<artifactId>commons-pool</artifactId>
+				<version>1.6</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-compress</artifactId>
+				<version>1.13</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
 			<dependency>
@@ -353,49 +401,7 @@
 				<artifactId>resteasy-jaxrs</artifactId>
 				<version>${resteasy.version}</version>
 			</dependency>
-			<!-- JAXB support -->
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jaxb-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jettison-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<!-- Resteasy Server Cache -->
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-cache-core</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>tjws</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jackson-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-crypto</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-multipart-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<!-- Spring integration -->
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-spring</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
 			<dependency>
 				<groupId>org.apache.tika</groupId>
@@ -420,9 +426,90 @@
 				<artifactId>avro</artifactId>
 				<version>1.8.1</version>
 			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>2.8.6</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>2.8.6</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${spring.boot.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-starter-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-actuator</artifactId>
+				<version>${spring.boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<scope>test</scope>
+				<version>${spring.boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-devtools</artifactId>
+				<version>${spring.boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.annotation</groupId>
+				<artifactId>javax.annotation-api</artifactId>
+				<version>1.2</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.datatype</groupId>
+				<artifactId>jackson-datatype-joda</artifactId>
+				<version>2.4.1</version>
+			</dependency>
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>2.7</version>
+			</dependency>
+			<dependency>
+				<groupId>org.irods.jargon.springboot</groupId>
+				<artifactId>resteasy-spring-boot-starter</artifactId>
+				<version>4.2.1.0-SNAPSHOT</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-starter-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 	<build>
 		<pluginManagement>
 			<plugins>
