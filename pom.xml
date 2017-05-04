@@ -521,9 +521,6 @@
 				<version>2.9.9</version>
 			</dependency>
 			
-</dependency>
-
-
 		</dependencies>
 	</dependencyManagement>
 	<build>
