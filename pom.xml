@@ -5,7 +5,7 @@
 	<groupId>org.irods</groupId>
 	<artifactId>jargon-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>4.1.10.0-SNAPSHOT</version>
+	<version>4.2.1.0-SNAPSHOT</version>
 	<name>Jargon POM</name>
 	<description>Master POM for Jargon-related projects</description>
 	<url>https://github.com/DICE-UNC/jargon</url>
@@ -23,6 +23,7 @@
 		<java.version>1.8</java.version>
 		<resteasy.version>3.1.0.Final</resteasy.version>
 		<spring.boot.version>1.5.1.RELEASE</spring.boot.version>
+		<globus.version>2.0.6</globus.version>
 	</properties>
 	<issueManagement>
 		<system>Git</system>
@@ -172,9 +173,11 @@
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/uk.org.mygrid.resources/cog-jglobus -->
 			<dependency>
-				<groupId>uk.org.mygrid.resources</groupId>
-				<artifactId>cog-jglobus</artifactId>
-				<version>1.2-060802</version>
+				<groupId>org.jglobus</groupId>
+				<artifactId>gss</artifactId>
+				<scope>compile</scope>
+				<version>${globus.version}</version>
+				<type>jar</type>
 			</dependency>
 			<dependency>
 				<groupId>antlr</groupId>
@@ -223,6 +226,13 @@
 				<artifactId>commons-io</artifactId>
 				<version>2.5</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-compress</artifactId>
+				<version>1.14</version>
+			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
 			<dependency>
 				<groupId>dom4j</groupId>
@@ -418,41 +428,11 @@
 				<scope>import</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jaxrs</artifactId>
-				<version>${resteasy-version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>jaxrs-api</artifactId>
-				<version>${resteasy.version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-validator-provider-11</artifactId>
-				<version>${resteasy.version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-multipart-provider</artifactId>
-				<version>${resteasy.version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jackson2-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>javax.annotation</groupId>
 				<artifactId>javax.annotation-api</artifactId>
 				<version>1.2</version>
 				<scope>provided</scope>
 			</dependency>
-
 			<dependency>
 				<groupId>com.fasterxml.jackson.datatype</groupId>
 				<artifactId>jackson-datatype-joda</artifactId>
@@ -464,8 +444,6 @@
 				<version>2.7</version>
 			</dependency>
 		</dependencies>
-
-
 	</dependencyManagement>
 
 	<build>
