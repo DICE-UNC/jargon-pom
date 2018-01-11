@@ -84,6 +84,7 @@
 				<checksumPolicy>warn</checksumPolicy>
 			</snapshots>
 		</repository>
+		<!--
 		<repository>
 			<id>jboss</id>
 			<name>jboss.repository</name>
@@ -96,7 +97,8 @@
 				<updatePolicy>never</updatePolicy>
 				<checksumPolicy>fail</checksumPolicy>
 			</snapshots>
-		</repository>
+		</repository> -->
+		<!--
 		<repository>
 			<id>dataone.org</id>
 			<url>http://dev-testing.dataone.org/maven</url>
@@ -107,13 +109,14 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+	-->
 		<repository>
 			<id>maven2-repository.dev.java.net</id>
 			<name>Java.net Repository for Maven</name>
 			<url>http://download.java.net/maven/2/</url>
 			<layout>default</layout>
 		</repository>
-		<repository>
+		<!-- <repository>
 			<id>mygrid-uk</id>
 			<url>http://www.mygrid.org.uk/maven/repository/</url>
 			<releases>
@@ -122,7 +125,7 @@
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</repository>
+		</repository> -->
 	</repositories>
 	<distributionManagement>
 		<repository>
@@ -159,7 +162,7 @@
 				<version>1.9</version>
 				<configuration>
 					<links>
-						<link>http://download.oracle.com/javase/6/docs/api/</link>
+						<link>http://download.oracle.com/javase/8/docs/api/</link>
 						<link>http://commons.apache.org/logging/apidocs/</link>
 						<link>http://commons.apache.org/io/apidocs/</link>
 						<link>http://commons.apache.org/lang/apidocs/</link>
@@ -186,7 +189,7 @@
 	</reporting>
 	<dependencyManagement>
 		<dependencies>
-		
+
 			<!-- https://mvnrepository.com/artifact/uk.org.mygrid.resources/cog-jglobus -->
 			<dependency>
 				<groupId>org.jglobus</groupId>
@@ -275,11 +278,14 @@
 				<artifactId>jta</artifactId>
 				<version>1.1</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>3.1.0</version>
+			    <groupId>javax.servlet</groupId>
+			    <artifactId>javax.servlet-api</artifactId>
+			    <version>3.1.0</version>
+			    <scope>provided</scope>
 			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/junit/junit -->
 			<dependency>
 				<groupId>junit</groupId>
@@ -386,58 +392,6 @@
 				<groupId>org.perf4j</groupId>
 				<artifactId>perf4j</artifactId>
 				<version>0.9.16</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jaxrs</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<!-- JAXB support -->
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jaxb-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jettison-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<!-- Resteasy Server Cache -->
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-cache-core</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>tjws</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-jackson-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-			<!-- <dependency> <groupId>org.jboss.resteasy</groupId> <artifactId>resteasy-crypto</artifactId>
-				<version>${resteasy.version}</version> </dependency> -->
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-multipart-provider</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-
-			<!-- Spring integration -->
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-spring</artifactId>
-				<version>${resteasy.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.jboss.resteasy</groupId>
-				<artifactId>resteasy-servlet-initializer</artifactId>
-				<version>${resteasy.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
