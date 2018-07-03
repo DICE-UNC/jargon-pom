@@ -6,7 +6,7 @@
 	<groupId>org.irods</groupId>
 	<artifactId>jargon-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>4.3.0.0-SNAPSHOT</version>
+	<version>4.3.1.0-SNAPSHOT</version>
 	<name>Jargon POM</name>
 	<description>Master POM for Jargon-related projects</description>
 	<url>https://github.com/DICE-UNC/jargon</url>
@@ -22,7 +22,6 @@
 		<sl4j.version>1.7.22</sl4j.version>
 		<log4j.version>1.2.17</log4j.version>
 		<java.version>1.8</java.version>
-		<resteasy.version>3.1.0.Final</resteasy.version>
 		<spring.boot.version>1.5.1.RELEASE</spring.boot.version>
 		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
 		<globus.version>2.0.6</globus.version>
