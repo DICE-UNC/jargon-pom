@@ -22,9 +22,10 @@
 		<sl4j.version>1.7.22</sl4j.version>
 		<log4j.version>1.2.17</log4j.version>
 		<java.version>1.8</java.version>
-		<spring.boot.version>1.5.1.RELEASE</spring.boot.version>
+		<spring.boot.version>1.5.9.RELEASE</spring.boot.version>
 		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
 		<globus.version>2.0.6</globus.version>
+		<springfox-version>2.7.0</springfox-version>
 	</properties>
 	<issueManagement>
 		<system>Git</system>
@@ -335,6 +336,43 @@
 				<artifactId>joda-time</artifactId>
 				<version>2.7</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-parent</artifactId>
+				<version>${spring.boot.version}</version>
+			</dependency>
+			 <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <!--SpringFox dependencies -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.joschi.jackson</groupId>
+            <artifactId>jackson-datatype-threetenbp</artifactId>
+            <version>2.6.4</version>
+        </dependency>
+    <!-- Bean Validation API support -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>
