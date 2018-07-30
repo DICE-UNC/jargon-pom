@@ -6,19 +6,19 @@
 	<groupId>org.irods</groupId>
 	<artifactId>jargon-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>4.3.1.0-SNAPSHOT</version> 
+	<version>4.3.1.0-SNAPSHOT</version>
 	<name>Jargon POM</name>
 	<description>Master POM for Jargon-related projects</description>
 	<url>https://github.com/DICE-UNC/jargon</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.webmvc.version>5.0.7.RELEASE</spring.webmvc.version>
+		<spring.webmvc.version>4.3.18.RELEASE</spring.webmvc.version>
 		<spring.security.version>3.0.5.RELEASE</spring.security.version>
-		<hibernate.version>5.2.6.Final</hibernate.version>
+		<hibernate.version>4.3.11.Final</hibernate.version>
 		<findbugs.version>2.5.2</findbugs.version>
-		<spring.core.version>5.0.7.RELEASE</spring.core.version>
-		<spring.web.version>5.0.7.RELEASE</spring.web.version>
-		<spring.security.version>5.0.6.RELEASE</spring.security.version>
+		<spring.core.version>4.3.18.RELEASE</spring.core.version>
+		<spring.web.version>4.3.18.RELEASE</spring.web.version>
+		<spring.security.version>4.3.18.RELEASE</spring.security.version>
 		<spring.boot.version>2.0.3.RELEASE</spring.boot.version>
 		<d1_libclient_version>2.3.0</d1_libclient_version>
 		<sl4j.version>1.7.22</sl4j.version>
