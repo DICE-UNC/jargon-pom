@@ -6,25 +6,21 @@
 	<groupId>org.irods</groupId>
 	<artifactId>jargon-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>4.3.0.2-SNAPSHOT</version> 
+	<version>4.3.0.2-SNAPSHOT</version>
 	<name>Jargon POM</name>
 	<description>Master POM for Jargon-related projects</description>
 	<url>https://github.com/DICE-UNC/jargon</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.webmvc.version>4.3.5.RELEASE</spring.webmvc.version>
-		<spring.security.version>3.0.5.RELEASE</spring.security.version>
 		<hibernate.version>5.2.6.Final</hibernate.version>
-		<findbugs.version>2.5.2</findbugs.version>
 		<spring.core.version>4.3.6.RELEASE</spring.core.version>
-		<spring.security.version>4.2.1.RELEASE</spring.security.version>
 		<d1_libclient_version>2.3.0</d1_libclient_version>
-		<sl4j.version>1.7.22</sl4j.version>
+		<sl4j.version>1.7.25</sl4j.version>
 		<log4j.version>1.2.17</log4j.version>
 		<java.version>1.8</java.version>
-		<resteasy.version>3.1.0.Final</resteasy.version>
 		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
-		<globus.version>2.0.6</globus.version>
+		<globus.version>2.1.0</globus.version>
 	</properties>
 	<issueManagement>
 		<system>Git</system>
@@ -162,40 +158,42 @@
 				<version>${globus.version}</version>
 				<type>jar</type>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.antlr/antlr -->
 			<dependency>
-				<groupId>antlr</groupId>
+				<groupId>org.antlr</groupId>
 				<artifactId>antlr</artifactId>
-				<version>2.7.7</version>
+				<version>3.5.2</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
+			<!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
 			<dependency>
-				<groupId>c3p0</groupId>
+				<groupId>com.mchange</groupId>
 				<artifactId>c3p0</artifactId>
-				<version>0.9.1.2</version>
+				<version>0.9.5.2</version>
 			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/cglib/cglib -->
 			<dependency>
 				<groupId>cglib</groupId>
 				<artifactId>cglib</artifactId>
-				<version>3.2.4</version>
+				<version>3.2.9</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>1.10</version>
+				<version>1.11</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
 			<dependency>
-				<groupId>commons-collections</groupId>
-				<artifactId>commons-collections</artifactId>
-				<version>3.2.2</version>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>4.2</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 			<dependency>
-				<groupId>commons-lang</groupId>
-				<artifactId>commons-lang</artifactId>
-				<version>2.6</version>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.8.1</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
 			<dependency>
@@ -207,8 +205,9 @@
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.5</version>
+				<version>2.6</version>
 			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -261,23 +260,21 @@
 				<artifactId>log4j</artifactId>
 				<version>${log4j.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-exec -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-exec</artifactId>
-				<version>1.0.1</version>
+				<version>1.3</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/commons-pool/commons-pool -->
-			<dependency>
-				<groupId>commons-pool</groupId>
-				<artifactId>commons-pool</artifactId>
-				<version>1.6</version>
-			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-pool2</artifactId>
-				<version>2.5.0</version>
+				<version>2.6.0</version>
 			</dependency>
+
+
 			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -293,19 +290,20 @@
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-core</artifactId>
-				<version>2.9.5</version>
+				<version>2.9.7</version>
 			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
-				<version>2.9.5</version>
+				<version>2.9.7</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
-				<version>2.9.5</version>
+				<version>2.9.7</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
 			<dependency>
@@ -313,35 +311,41 @@
 				<artifactId>tika-core</artifactId>
 				<version>1.19.1</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
 			<dependency>
 				<groupId>org.mockito</groupId>
-				<artifactId>mockito-all</artifactId>
-				<version>1.10.19</version>
+				<artifactId>mockito-core</artifactId>
+				<version>2.23.0</version>
+				<scope>test</scope>
 			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
 			<dependency>
 				<groupId>javax.annotation</groupId>
 				<artifactId>javax.annotation-api</artifactId>
-				<version>1.2</version>
-				<scope>provided</scope>
+				<version>1.3.2</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-joda -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.datatype</groupId>
 				<artifactId>jackson-datatype-joda</artifactId>
-				<version>2.4.1</version>
+				<version>2.9.7</version>
 			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
 			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
-				<version>2.7</version>
+				<version>2.10.1</version>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<build>
 		<pluginManagement>
 			<plugins>
-				<!-- <plugin> <artifactId>maven-deploy-plugin</artifactId> <version>2.8.1</version>
-					<configuration> <altDeploymentRepository>internal.repo::default::file://${git.repo.root}/snapsots</altDeploymentRepository>
+				<!-- <plugin> <artifactId>maven-deploy-plugin</artifactId> <version>2.8.1</version> 
+					<configuration> <altDeploymentRepository>internal.repo::default::file://${git.repo.root}/snapsots</altDeploymentRepository> 
 					</configuration> </plugin> -->
 
 				<plugin>
@@ -404,10 +408,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
