@@ -9,6 +9,3 @@ This is the parent POM for Jargon-related projects, representing a restructuring
 
 Repo: https://github.com/DICE-UNC/jargon-pom
 
-#### Update dependencies for Jackson, Commons compress, and Tika #316
-
-Update various dependencies for Jackson, Tika, etc.

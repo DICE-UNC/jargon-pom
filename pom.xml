@@ -14,18 +14,18 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.webmvc.version>4.3.18.RELEASE</spring.webmvc.version>
 		<spring.security.version>3.0.5.RELEASE</spring.security.version>
-		<hibernate.version>4.3.11.Final</hibernate.version>
+		<hibernate.version>5.2.6.Final</hibernate.version>
 		<findbugs.version>2.5.2</findbugs.version>
 		<spring.core.version>4.3.18.RELEASE</spring.core.version>
 		<spring.web.version>4.3.18.RELEASE</spring.web.version>
 		<spring.security.version>4.3.18.RELEASE</spring.security.version>
 		<spring.boot.version>2.0.3.RELEASE</spring.boot.version>
 		<d1_libclient_version>2.3.0</d1_libclient_version>
-		<sl4j.version>1.7.22</sl4j.version>
+		<sl4j.version>1.7.25</sl4j.version>
 		<log4j.version>1.2.17</log4j.version>
 		<java.version>1.8</java.version>
 		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
-		<globus.version>2.0.6</globus.version>
+		<globus.version>2.1.0</globus.version>
 	</properties>
 	<issueManagement>
 		<system>Git</system>
@@ -114,17 +114,17 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jxr-maven-plugin</artifactId>
-				<version>2.0-beta-1</version>
+				<version>3.0.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>2.9</version>
+				<version>2.22.1</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>1.9</version>
+				<version>3.0.1</version>
 				<configuration>
 					<links>
 						<link>http://download.oracle.com/javase/8/docs/api/</link>
@@ -140,12 +140,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-changelog-plugin</artifactId>
-				<version>1.9.2</version>
+				<version>2.3</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>1.4.1</version>
+				<version>2.5.3</version>
 				<configuration>
 					<!-- <tagBase>https://svn.apache.org/repos/asf/maven/components/releases</tagBase> -->
 				</configuration>
@@ -154,7 +154,6 @@
 	</reporting>
 	<dependencyManagement>
 		<dependencies>
-
 			<!-- https://mvnrepository.com/artifact/uk.org.mygrid.resources/cog-jglobus -->
 			<dependency>
 				<groupId>org.jglobus</groupId>
@@ -163,22 +162,23 @@
 				<version>${globus.version}</version>
 				<type>jar</type>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.antlr/antlr -->
 			<dependency>
-				<groupId>antlr</groupId>
+				<groupId>org.antlr</groupId>
 				<artifactId>antlr</artifactId>
-				<version>2.7.7</version>
+				<version>3.5.2</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
+			<!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
 			<dependency>
-				<groupId>c3p0</groupId>
+				<groupId>com.mchange</groupId>
 				<artifactId>c3p0</artifactId>
-				<version>0.9.1.2</version>
+				<version>0.9.5.2</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/cglib/cglib -->
 			<dependency>
 				<groupId>cglib</groupId>
 				<artifactId>cglib</artifactId>
-				<version>3.2.4</version>
+				<version>3.2.9</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 			<dependency>
@@ -186,11 +186,11 @@
 				<artifactId>commons-codec</artifactId>
 				<version>1.11</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
 			<dependency>
-				<groupId>commons-collections</groupId>
-				<artifactId>commons-collections</artifactId>
-				<version>3.2.2</version>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>4.2</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 			<dependency>
@@ -209,7 +209,7 @@
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.5</version>
+				<version>2.6</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
 			<dependency>
@@ -217,7 +217,6 @@
 				<artifactId>commons-compress</artifactId>
 				<version>1.18</version>
 			</dependency>
-
 			<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
 			<dependency>
 				<groupId>dom4j</groupId>
@@ -251,7 +250,6 @@
 				<version>3.1.0</version>
 				<scope>provided</scope>
 			</dependency>
-
 			<!-- https://mvnrepository.com/artifact/junit/junit -->
 			<dependency>
 				<groupId>junit</groupId>
@@ -263,10 +261,11 @@
 				<artifactId>log4j</artifactId>
 				<version>${log4j.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-exec -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-exec</artifactId>
-				<version>1.0.1</version>
+				<version>1.3</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
 			<dependency>
@@ -274,33 +273,40 @@
 				<artifactId>commons-pool2</artifactId>
 				<version>2.6.0</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
 			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${sl4j.version}</version>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>1.10.19</version>
+				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>
 				<version>${sl4j.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.25</version>
+			</dependency>
 			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-core</artifactId>
-				<version>2.9.5</version>
+				<version>2.9.7</version>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
-				<version>2.9.5</version>
+				<version>2.9.7</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
-				<version>2.9.5</version>
+				<version>2.9.7</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
 			<dependency>
@@ -308,27 +314,30 @@
 				<artifactId>tika-core</artifactId>
 				<version>1.19.1</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
 			<dependency>
 				<groupId>org.mockito</groupId>
-				<artifactId>mockito-all</artifactId>
-				<version>1.10.19</version>
+				<artifactId>mockito-core</artifactId>
+				<version>2.23.0</version>
+				<scope>test</scope>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
 			<dependency>
 				<groupId>javax.annotation</groupId>
 				<artifactId>javax.annotation-api</artifactId>
-				<version>1.2</version>
-				<scope>provided</scope>
+				<version>1.3.2</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-joda -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.datatype</groupId>
 				<artifactId>jackson-datatype-joda</artifactId>
-				<version>2.4.1</version>
+				<version>2.9.7</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
 			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
-				<version>2.7</version>
+				<version>2.10.1</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -350,7 +359,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.17</version>
+				<version>2.22.1</version>
 				<configuration>
 					<includes>
 						<include>**/AllTests.java</include>
@@ -360,7 +369,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.1</version>
+				<version>3.8.0</version>
 				<configuration>
 					<debug>false</debug>
 					<optimize>true</optimize>
@@ -374,7 +383,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.2.1</version>
+				<version>2.5.3</version>
 				<configuration>
 					<arguments>-Dmaven.test.skip</arguments>
 				</configuration>
@@ -389,7 +398,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.4</version>
+				<version>3.0.0</version>
 				<executions>
 					<execution>
 						<id>default-jar</id>
@@ -400,11 +409,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-			</plugin>
 		</plugins>
 	</build>
-
 </project>
