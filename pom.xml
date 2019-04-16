@@ -12,13 +12,13 @@
 	<url>https://github.com/DICE-UNC/jargon</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.webmvc.version>4.3.18.RELEASE</spring.webmvc.version>
+		<spring.webmvc.version>4.3.23.RELEASE</spring.webmvc.version>
 		<spring.security.version>3.0.5.RELEASE</spring.security.version>
 		<hibernate.version>5.2.6.Final</hibernate.version>
 		<findbugs.version>2.5.2</findbugs.version>
-		<spring.core.version>4.3.18.RELEASE</spring.core.version>
-		<spring.web.version>4.3.18.RELEASE</spring.web.version>
-		<spring.security.version>4.3.18.RELEASE</spring.security.version>
+		<spring.core.version>4.3.23.RELEASE</spring.core.version>
+		<spring.web.version>4.3.23.RELEASE</spring.web.version>
+		<spring.security.version>4.3.23.RELEASE</spring.security.version>
 		<spring.boot.version>2.0.3.RELEASE</spring.boot.version>
 		<d1_libclient_version>2.3.0</d1_libclient_version>
 		<sl4j.version>1.7.25</sl4j.version>
@@ -26,6 +26,7 @@
 		<java.version>1.8</java.version>
 		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
 		<globus.version>2.1.0</globus.version>
+		<jackson.version>2.9.8</jackson.version>
 	</properties>
 	<issueManagement>
 		<system>Git</system>
@@ -162,6 +163,12 @@
 				<version>${globus.version}</version>
 				<type>jar</type>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+			<dependency>
+				<groupId>org.javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.24.1-GA</version>
+			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.antlr/antlr -->
 			<dependency>
 				<groupId>org.antlr</groupId>
@@ -172,31 +179,31 @@
 			<dependency>
 				<groupId>com.mchange</groupId>
 				<artifactId>c3p0</artifactId>
-				<version>0.9.5.2</version>
+				<version>0.9.5.4</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/cglib/cglib -->
 			<dependency>
 				<groupId>cglib</groupId>
 				<artifactId>cglib</artifactId>
-				<version>3.2.9</version>
+				<version>3.2.10</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>1.11</version>
+				<version>1.12</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-collections4</artifactId>
-				<version>4.2</version>
+				<version>4.3</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.8.1</version>
+				<version>3.9</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
@@ -271,7 +278,7 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-pool2</artifactId>
-				<version>2.6.0</version>
+				<version>2.6.2</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
 			<dependency>
@@ -295,30 +302,30 @@
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-core</artifactId>
-				<version>2.9.7</version>
+				<version>${jackson.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
-				<version>2.9.7</version>
+				<version>${jackson.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
-				<version>2.9.7</version>
+				<version>${jackson.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
 			<dependency>
 				<groupId>org.apache.tika</groupId>
 				<artifactId>tika-core</artifactId>
-				<version>1.19.1</version>
+				<version>1.20</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
 			<dependency>
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-core</artifactId>
-				<version>2.23.0</version>
+				<version>2.27.0</version>
 				<scope>test</scope>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
@@ -344,8 +351,8 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-				<!-- <plugin> <artifactId>maven-deploy-plugin</artifactId> <version>2.8.1</version> 
-					<configuration> <altDeploymentRepository>internal.repo::default::file://${git.repo.root}/snapsots</altDeploymentRepository> 
+				<!-- <plugin> <artifactId>maven-deploy-plugin</artifactId> <version>2.8.1</version>
+					<configuration> <altDeploymentRepository>internal.repo::default::file://${git.repo.root}/snapsots</altDeploymentRepository>
 					</configuration> </plugin> -->
 
 				<plugin>
