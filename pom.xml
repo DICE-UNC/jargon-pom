@@ -6,21 +6,22 @@
 	<groupId>org.irods</groupId>
 	<artifactId>jargon-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>4.3.0.2-RELEASE</version>
+	<version>4.3.0.3-SNAPSHOT</version>
 	<name>Jargon POM</name>
 	<description>Master POM for Jargon-related projects</description>
 	<url>https://github.com/DICE-UNC/jargon</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.webmvc.version>4.3.5.RELEASE</spring.webmvc.version>
+		<spring.webmvc.version>4.3.23.RELEASE</spring.webmvc.version>
 		<hibernate.version>5.2.6.Final</hibernate.version>
-		<spring.core.version>4.3.6.RELEASE</spring.core.version>
+		<spring.core.version>4.3.23.RELEASE</spring.core.version>
 		<d1_libclient_version>2.3.0</d1_libclient_version>
 		<sl4j.version>1.7.25</sl4j.version>
 		<log4j.version>1.2.17</log4j.version>
 		<java.version>1.8</java.version>
 		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
 		<globus.version>2.1.0</globus.version>
+		<jackson.version>2.9.8</jackson.version>
 	</properties>
 	<issueManagement>
 		<system>Git</system>
@@ -161,7 +162,7 @@
 			<dependency>
 				<groupId>org.javassist</groupId>
 				<artifactId>javassist</artifactId>
-				<version>3.23.1-GA</version>
+				<version>3.24.1-GA</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.antlr/antlr -->
 			<dependency>
@@ -173,31 +174,31 @@
 			<dependency>
 				<groupId>com.mchange</groupId>
 				<artifactId>c3p0</artifactId>
-				<version>0.9.5.3</version>
+				<version>0.9.5.4</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/cglib/cglib -->
 			<dependency>
 				<groupId>cglib</groupId>
 				<artifactId>cglib</artifactId>
-				<version>3.2.9</version>
+				<version>3.2.10</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>1.11</version>
+				<version>1.12</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-collections4</artifactId>
-				<version>4.2</version>
+				<version>4.3</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.8.1</version>
+				<version>3.9</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
 			<dependency>
@@ -271,13 +272,13 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-pool2</artifactId>
-				<version>2.6.0</version>
+				<version>2.6.2</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
 			<dependency>
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-all</artifactId>
-				<version>1.10.19</version>
+				<version>2.27.0</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
@@ -295,19 +296,19 @@
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-core</artifactId>
-				<version>2.9.7</version>
+				<version>${jackson.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
-				<version>2.9.7</version>
+				<version>${jackson.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
-				<version>2.9.8</version>
+				<version>${jackson.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
 			<dependency>
@@ -319,7 +320,7 @@
 			<dependency>
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-core</artifactId>
-				<version>2.23.0</version>
+				<version>2.27.0</version>
 				<scope>test</scope>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
