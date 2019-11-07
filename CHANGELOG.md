@@ -14,6 +14,8 @@ Added a CHANGELOG.md to align with Jargon generally
 
 #### Upgrade Jackson to 4.9.9 #7
 
+#### Upgrade Tika and commons-compress
+
 Upgrade based on GitHub deps recommendation
 
 ### Removed
