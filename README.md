@@ -1,7 +1,7 @@
 # Project: Jargon Master POM
 ### Date: 
 ### Author: Mike Conway
-### Release Version: 4.3.1.0-SNAPSHOT
+### Release Version: 4.3.2.0-SNAPSHOT
 
 ### git tag:
 
