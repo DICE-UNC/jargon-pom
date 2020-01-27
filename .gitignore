@@ -25,3 +25,4 @@ testing.properties
 JargonVersion.java
 **/${test.option.mount.basedir}
 *.*~
+*.code-workspace

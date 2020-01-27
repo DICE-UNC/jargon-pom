@@ -8,14 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Add Changelog
 
-Added a CHANGELOG.md to align with Jargon generally
-
 ### Changed
-
-#### Upgrade Jackson to 4.9.9 #7
-
-#### Upgrade Tika and commons-compress
-
-Upgrade based on GitHub deps recommendation
 
 ### Removed
