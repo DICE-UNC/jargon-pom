@@ -10,4 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+#### remove jar build plugins #11
+
+Remove unnecessary build plugins from the master pom as they can interfere with downstream builds such as .war appsx
+
+
 ### Removed
