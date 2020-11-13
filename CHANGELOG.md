@@ -14,5 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Remove unnecessary build plugins from the master pom as they can interfere with downstream builds such as .war appsx
 
+#### update junit per dependabot
 
 ### Removed
