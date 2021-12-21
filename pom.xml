@@ -21,8 +21,8 @@
 		<spring.security.version>4.3.23.RELEASE</spring.security.version>
 		<spring.boot.version>2.0.3.RELEASE</spring.boot.version>
 		<d1_libclient_version>2.3.0</d1_libclient_version>
-		<sl4j.version>1.7.25</sl4j.version>
-		<log4j.version>1.2.15</log4j.version>
+		<sl4j.version>1.7.32</sl4j.version>
+		<log4j.version>2.17.0</log4j.version>
 		<java.version>1.8</java.version>
 		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
 		<globus.version>2.1.0</globus.version>
@@ -271,8 +271,8 @@
 				<version>4.13.1</version>
 			</dependency>
 			<dependency>
-				<groupId>log4j</groupId>
-				<artifactId>log4j</artifactId>
+				 <groupId>org.apache.logging.log4j</groupId>
+				 <artifactId>log4j-core</artifactId>
 				<version>${log4j.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-exec -->
