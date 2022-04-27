@@ -1,7 +1,7 @@
 # Project: Jargon Master POM
-### Date: 01/25/2022
+### Date: 
 ### Author: Mike Conway
-### Release Version: 4.3.2.5-RELEASE
+### Release Version: 4.3.2.6-SNAPSHOT
 
 
 This is the parent POM for Jargon-related projects, representing a restructuring of related Jargon projects in a more streamlined fashion.
