@@ -27,7 +27,7 @@
 		<maven.war.plugin.version>3.0.0</maven.war.plugin.version>
 		<globus.version>2.1.0</globus.version>
 		<jjwt.version>0.11.2</jjwt.version>
-		<jackson.version>2.10.0</jackson.version>
+		<jackson.version>2.12.6.1</jackson.version>
 	</properties>
 	<issueManagement>
 		<system>Git</system>
