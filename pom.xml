@@ -6,7 +6,7 @@
 	<groupId>org.irods</groupId>
 	<artifactId>jargon-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>4.3.2.6-SNAPSHOT</version>
+	<version>4.3.3.0-SNAPSHOT</version>
 	<name>Jargon POM</name>
 	<description>Master POM for Jargon-related projects</description>
 	<url>https://github.com/DICE-UNC/jargon</url>
@@ -67,7 +67,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub DICE-UNC Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/DICE-UNC/test-maven</url>
+			<url>https://maven.pkg.github.com/DICE-UNC/maven</url>
 		</repository>
 	</distributionManagement>
 	<reporting>
