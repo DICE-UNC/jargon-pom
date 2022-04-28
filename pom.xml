@@ -67,7 +67,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub DICE-UNC Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/DICE-UNC/test-maven</url>
+			<url>https://maven.pkg.github.com/DICE-UNC/maven</url>
 		</repository>
 	</distributionManagement>
 	<reporting>
