@@ -91,9 +91,9 @@
 	</repositories>
 	<distributionManagement>
 		<repository>
-			<id>github</id>
-			<name>GitHub DICE-UNC Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/DICE-UNC/maven</url>
+			<id>internal.repo</id>
+			<name>internal.repo</name>
+			<url>file://${git.repo.root}/releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>internal.repo.snapshot</id>
