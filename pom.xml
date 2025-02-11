@@ -6,7 +6,7 @@
 	<groupId>org.irods</groupId>
 	<artifactId>jargon-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>4.3.5.0-SNAPSHOT</version>
+	<version>4.3.5.0-RELEASE</version>
 	<name>Jargon POM</name>
 	<description>Master POM for Jargon-related projects</description>
 	<url>https://github.com/DICE-UNC/jargon</url>
